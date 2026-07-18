@@ -9,18 +9,18 @@ api_hash = "d88151d38f1d4f740c89724ba66620e4"
 
 client = TelegramClient('name_changer', api_id, api_hash)
 
-emojis = ["🔥","💀","😈","⚡","🌟","☠️","🃏","🐉","🚀","💎","🩸","❄️","👑","🔮","⚔️","🪩","🎃","🕹️","☢️","🌀","🌈","🖤","💜","🩷","🦍","🐺","🦇"]
+emojis = ["🔥","💀","😈","⚡","🌟","☠️","🃏","🐉","🚀","💎","🩸","❄️","👑","🔮","⚔️","🪩","🎃","🕹️","☢️","🌀","🌈"]
 
 change_count = 0
 
 def generate_random_name():
-    length = random.randint(8, 16)
-    base = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
+    # Cố định 10 ký tự
+    base = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10))
     
-    # 100% có emoji
     emoji1 = random.choice(emojis)
-    emoji2 = random.choice(emojis) if random.random() > 0.5 else ""
+    emoji2 = random.choice(emojis)
     
+    # Format: emoji1 + base + emoji2
     return f"{emoji1}{base}{emoji2}"
 
 async def main():
