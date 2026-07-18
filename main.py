@@ -23,7 +23,7 @@ def generate_random_name():
 
 async def main():
     await client.start()
-    print("🚀 Name Changer (Telethon) đang chạy...")
+    print("🚀 Đã đổi tên thành công...")
 
     while True:
         try:
