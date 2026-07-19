@@ -39,7 +39,7 @@ async def main():
         except Exception as e:
             print(f"[{time.strftime('%H:%M:%S')}] ❌ Lỗi: {e}")
         
-        await asyncio.sleep(300)  # 5 phút
+        await asyncio.sleep(180)  # 5 phút
 
 if __name__ == "__main__":
     asyncio.run(main())
